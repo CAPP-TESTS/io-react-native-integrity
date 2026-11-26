@@ -241,7 +241,7 @@ class IoReactNativeIntegrityModule(reactContext: ReactApplicationContext) :
       return false
     }
     return try {
-      for (i in 0 until chain.size - 1) {
+      for (i in 0 until chain.lastIndex) {
         chain[i].verify(chain[i + 1].publicKey)
       }
       true
